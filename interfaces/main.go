@@ -34,9 +34,9 @@ func SumTotalAreas(shapes ...Shape) float64{
 }
 
 func main() {
-  c := Circle{r: 5} 
-  r := Rectangle{x:3, y:6}
+  c := &Circle{r: 5} 
+  r := &Rectangle{x:3, y:6}
   fmt.Println("area of circle: ", c.area()) 
   fmt.Println("area of rectangle: ", r.area()) 
-  fmt.Println("Sum of Areas: ", SumTotalAreas(&c, &r)) 
+  fmt.Println("Sum of Areas: ", SumTotalAreas(c, r)) 
 }
