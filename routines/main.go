@@ -7,7 +7,7 @@ import (
 
 func f(n int) {
   for i := 0; i < 10; i++ {
-    time.Sleep(800000000)
+    time.Sleep(800 * time.Millisecond)
     fmt.Println(n, ":", i)
   }
 }
