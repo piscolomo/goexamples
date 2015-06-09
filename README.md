@@ -1,0 +1,2 @@
+# goexamples
+Examples for Go
