@@ -16,7 +16,7 @@ func change_with_pointer(user *User){
 
 func main() {
   user := User{"Julio"}
-  fmt.Println("Say hello to the pointer!: ", &user)
+  fmt.Println("Say hello to the pointer!: ", &user.name)
   fmt.Println(user)
   change_without_pointer(user)
   fmt.Println(user)
