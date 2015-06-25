@@ -1,27 +1,24 @@
 package main
 
-import "fmt"
-
-type Company struct{
-  name string
-}
-
-type Post struct{
-  content string
-}
+import (
+  "fmt"
+)
 
 type User struct{
-  name string
-  company Company
-  posts []Post
+  name, email string
+  age int
 }
 
-func main() {
-  company := Company{"Google"}
-  post1 := Post{"Hello World"}
-  post2 := Post{"Hola Mundo"}
-  user := User{"Julio", company, []Post{post1, post2}}
-  fmt.Println(user.name)
-  fmt.Println(user.company.name)
-  fmt.Println(user.posts)
+type Student struct{
+  User
+  speciality string
+}
+
+func main(){
+  student := Student{User{"Julio", "julio@example.com", 23}, "Engineer"}
+  fmt.Println(student)
+  fmt.Println(student.name)
+  fmt.Println(student.speciality)
+  student.age = 25
+  fmt.Println(student.age)
 }
